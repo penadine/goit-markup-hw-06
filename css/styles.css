@@ -255,6 +255,7 @@ button {
 /* Модальное окно */
 
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,14 +272,14 @@ button {
 .button-close {
   display: flex;
   background: #ffffff;
-  margin-left: auto;
   justify-content: center;
   align-items: center;
   border: none;
   padding: 0;
   cursor: pointer;
-  margin-top: 8px;
-  margin-right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .icon-close {
@@ -313,7 +314,6 @@ button {
   line-height: 1.17;
   letter-spacing: 0.01em;
   width: 448px;
-  margin-left: 40px;
 }
 
 .form-field {
@@ -371,9 +371,13 @@ button {
   padding: 0;
   cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  font-size: 12px;
+  line-height: 1.17px;
+  letter-spacing: 0.01em;
   border-radius: 4px;
   padding-right: 16px;
   padding-left: 16px;
+  padding-top: 12px;
   transition-property: border-color, outline-color;
   transition-duration: var(--time-duration);
   transition-timing-function: var(--timing-function);
@@ -389,13 +393,13 @@ button {
 .textarea-form-input::placeholder {
   /* width: 416px;
   height: 96px; */
-  padding-top: 8px;
   font-size: 12px;
   line-height: 1.17px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding-top: 12px;
   padding-bottom: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-input:focus + .contact-icon,
@@ -406,26 +410,30 @@ button {
 .confirm {
   display: flex;
   align-items: center;
-}
-
-.confirm-contact {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
   margin-top: 20px;
   margin-bottom: 30px;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkbox-confirm {
   width: 16px;
   height: 15px;
-  position: relative;
-  visibility: hidden;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative;
+  visibility: hidden; */
 }
 
-
-.checkbox-confirm::before {
+/* .checkbox-confirm::before {
   width: 16px;
   height: 15px;
   content: "";
@@ -436,7 +444,7 @@ button {
   overflow: hidden;
   vertical-align: middle;
   visibility: visible;
-}
+}  */
 
 .checkbox-confirm:checked::before {
   width: 16px;
@@ -472,6 +480,15 @@ button {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.button-send:hover,
+.button-send:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Наші переваги та вміння */
@@ -673,7 +690,10 @@ button {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
+
+/* 1. Блок з адресою */
 
 /* лого в підвалі */
 .logo .white {
@@ -713,7 +733,12 @@ button {
   color: var(--accent-color);
 }
 
-/* Приєднуйтесь */
+/* 2. Блок з соціальними контактами. Приєднуйтесь */
+
+.footer-social-icons {
+  padding-top: 12px;
+  margin-left: 70px;
+}
 
 .join {
   line-height: 1.17;
@@ -721,11 +746,6 @@ button {
   font-size: 14px;
   margin-bottom: 20px;
   color: #ffffff;
-}
-
-.footer-social-icons {
-  margin-top: 12px;
-  margin-left: 70px;
 }
 
 .footer-social-icons .social-icons {
@@ -752,10 +772,13 @@ button {
   background-color: var(--accent-color);
 }
 
+/* 3. Блок підписатися на розсилку */
+
 .subscribe {
-  margin-top: 12px;
+  padding-top: 12px;
   margin-left: 93px;
   display: flex;
+  align-items: flex-end;
 }
 
 .subcscribe-email {
@@ -815,7 +838,16 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-top: 36px;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .do-subscribe {
