@@ -385,11 +385,13 @@
     <!-- Підвал сторінки -->
     <footer class="footer">
       <div class="container">
+        <!-- Контактна інформація -->
+
+        <!-- 1. Блок з адресою -->
         <div class="logo-contact">
           <a href="./index.html" class="logo"
             >Web<span class="white">Studio</span></a
           >
-          <!-- Контактна інформація -->
           <address class="contact">
             <ul>
               <li>
@@ -412,6 +414,8 @@
             </ul>
           </address>
         </div>
+
+        <!-- 2. Блок з соціальними контактами -->
         <div class="footer-social-icons">
           <h3 class="join">ПРИЄДНУЙТЕСЬ</h3>
           <ul class="social-icons">
@@ -461,15 +465,19 @@
             </li>
           </ul>
         </div>
+
+        <!-- 3. Блок підписатися на розсилку -->
         <div class="subscribe">
-          <label for="email" class="subcscribe-email">
-            <h3 class="join">ПІДПИШИТЬСЯ НА РОЗСИЛКУ</h3>
-            <input
-              type="email"
-              placeholder="E-mail"
-              class="subcscribe-email-input"
-            />
-          </label>
+          <form action="">
+            <label for="email" class="subcscribe-email">
+              <h3 class="join">ПІДПИШИТЬСЯ НА РОЗСИЛКУ</h3>
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="subcscribe-email-input"
+              />
+            </label>
+          </form>
           <button type="subscribe" class="button-subscribe">
             <span class="do-subscribe">Підписатися</span>
             <svg class="icon-send" width="24" height="24" alt="send">
